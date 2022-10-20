@@ -3,11 +3,12 @@ import java.util.*;
 public class SnakeLadder {
     public static void main(String args[]){
         System.out.println("This is a Single player Snake & Ladder Game");
-        int pos = 0;
+        int pos = 0; int i=0;
         System.out.println("Initial Position is " + pos);
         Random r=new Random();
         while(pos!=100){
         int dieRoll=r.nextInt((5) +1)+1;
+         i++;
         System.out.println("You Got :" + dieRoll);
         int sld = r.nextInt(3);
         if(sld==0){
@@ -31,5 +32,6 @@ public class SnakeLadder {
         if(sld==2){
             System.out.println("You Got No Play: Position is " + pos);
         }}
+        System.out.println("Number of times Die Rolled to Win " + i);
     }
 }
